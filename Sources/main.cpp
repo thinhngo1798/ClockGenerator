@@ -28,11 +28,11 @@
 // Access to USBDM name-space
 using namespace USBDM;
 
-using North_Switch = GpioC<0>;
-using East_Switch = GpioC<1>;
-using South_Switch = GpioD<6>;
-using Centre_Switch = GpioD<5>;
-using West_Switch = GpioB<1>;
+using North_Switch = GpioC<0,ActiveLow>;
+using East_Switch = GpioC<1,ActiveLow>;
+using South_Switch = GpioD<6,ActiveLow>;
+using Centre_Switch = GpioD<5,ActiveLow>;
+using West_Switch = GpioB<1,ActiveLow>;
 
 #define numSegment 7
 #define horizontal_bar_width 20
@@ -165,6 +165,28 @@ void drawCursor(unsigned x, unsigned y, Colour colour) {
 
 int main() {
 
+	//Set input for switches:
+	 North_Switch::setInput(
+	      PinPull_Up,
+	      PinAction_None,
+	      PinFilter_Passive);
+	 East_Switch::setInput(
+		      PinPull_Up,
+		      PinAction_None,
+		      PinFilter_Passive);
+	 West_Switch::setInput(
+		      PinPull_Up,
+		      PinAction_None,
+		      PinFilter_Passive);
+	 South_Switch::setInput(
+		      PinPull_Up,
+		      PinAction_None,
+		      PinFilter_Passive);
+	 Centre_Switch::setInput(
+		      PinPull_Up,
+		      PinAction_None,
+		      PinFilter_Passive);
+
    // Draw pretty pattern
    lcd.clear(BACKGROUND_COLOUR);
    //lcd.drawCircle(CENTRE_X, CENTRE_Y, 20, WHITE);
@@ -200,10 +222,17 @@ int main() {
 //      xOld = x;
 //      yOld = y;
 
+// After experiment, The North_Switch is the one that is the nearest to the screen. Then you can figure out other direction.
+
+	   if (North_Switch::isPressed())
+	   {
+		   console.writeln("north switch");
+	   }
+
 	   s1.drawNum(lcd, i, FOREGROUND_COLOUR, BACKGROUND_COLOUR);
 	   ++i;
 	   if (i == 10) i=0;
-	   waitMS(1000);
+	   waitMS(500);
    }
    return 0;
 }
