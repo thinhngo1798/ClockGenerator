@@ -28,6 +28,11 @@
 // Access to USBDM name-space
 using namespace USBDM;
 
+using North_Switch = GpioC<0>;
+using East_Switch = GpioC<1>;
+using South_Switch = GpioD<6>;
+using Centre_Switch = GpioD<5>;
+using West_Switch = GpioB<1>;
 
 #define numSegment 7
 #define horizontal_bar_width 20
