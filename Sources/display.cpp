@@ -59,6 +59,22 @@ void Display::displayUnit(int scalar)
 	}
 }
 
+void Display::displayOnOff(bool isOn)
+{
+	lcd.setFont(fontSmall).setForeground(foreGroundColor).setBackground(backGroundColor);
+	//
+	// not erasing the old message yet
+	//
+	if (isOn)
+	{
+		lcd.putStr(onMessage, status_Xpos, status_Ypos);
+	}
+	else
+	{
+		lcd.putStr(offMessage, status_Xpos, status_Ypos);
+	}
+}
+
 void Display::displayNumber(int number)
 {
 	int numberSegments = 3;
@@ -107,6 +123,3 @@ void Display::display(int frequency)
 	displayMessage(frequency);
 	existingFrequency = frequency;
 }
-
-
-

@@ -31,10 +31,13 @@ class Display
 	static constexpr unsigned unit_Ypos = 50;
 	static constexpr unsigned message_Xpos = 5;
 	static constexpr unsigned message_Ypos = 5;
+	static constexpr unsigned status_Xpos = 5;
+	static constexpr unsigned status_Ypos = 110;
 
 	const char minFrequencyMessage[30] = "Min Frequency Available";
 	const char maxFrequencyMessage[30] = "Max Frequency Available";
-
+	const char onMessage[12] = "Status: On";
+	const char offMessage[12] = "Status: Off";
 	int existingFrequency;
 
 	Colour foreGroundColor = WHITE;
@@ -45,8 +48,8 @@ public:
 	void displayUnit(int frequency);
 	void displayNumber(int number);
 	void displayMessage(int frequency);
+	void displayOnOff(bool isOn);
 	void display(int frequency);
-
 };
 
 
