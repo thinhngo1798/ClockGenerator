@@ -1,6 +1,7 @@
 /**
- ============================================================================
- * @file    ftm-oc-example.cpp (180.ARM_Peripherals/Snippets)
+
+ * @file    generator.cpp (180.ARM_Peripherals/Snippets)
+>>>>>>> master
  * @brief   Demo using Ftm class to implement a basic Output Compare system
  *
  *  An FTM output generates a square wave with 100ms period
@@ -9,9 +10,12 @@
  *      Author: podonoghue
  ============================================================================
  */
+
+
+#include <ClockGenerator.h>
 #include "hardware.h"
 #include "smc.h"
-#include "ClockGenerator.h"
+
 
 using namespace USBDM;
 
@@ -30,7 +34,7 @@ using namespace USBDM;
 using Timer = Ftm1;
 
 /// Timer channel for output - change as required
-/// Recheck whether channel 1 or 0
+
 using TimerChannel = Timer::Channel<1>;
 
 /**
@@ -61,11 +65,7 @@ static void ftmCallback(uint8_t status) {
    }
 }
 
-/**
- * Demonstration main-line
- *
- * @return Not used.
- */
+
 
 void generatorInitialise(){
 	   /**
@@ -78,7 +78,10 @@ void generatorInitialise(){
 
 	   // Set IC/OC measurement interval to longest interval needed.
 	   // This adjusts the prescaler value but does not change the clock source
-	   Timer::setMaximumInterval(0.5/MIN_FREQUENCY);
+
+
+	   Timer::setMaximumInterval(1.1*0.5/MIN_FREQUENCY);
+
 
 	   // Calculate half-period in timer ticks
 	   // Must be done after timer clock configuration (above)
@@ -105,6 +108,16 @@ void generatorInitialise(){
 
 	   // Check if configuration failed
 	   USBDM::checkError();
+
+}
+
+/**
+ * Set generator Frequency
+ *
+ * @param frequency [MIN_FREQUENCY ... MAX_FREQUENCY]
+ */
+void generatorSetFrequency(unsigned frequency){
+	timerHalfPeriodInTicks=Timer::convertSecondsToTicks(0.5/frequency);
 
 }
 
