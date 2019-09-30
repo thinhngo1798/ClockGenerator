@@ -59,6 +59,7 @@
    <item key="$signal$VREF_OUT_descriptionSetting"         value="Vref output" />
    <item key="$signal$XTAL32_descriptionSetting"           value="Reserved(XTAL32)" />
    <item key="/FTFL/peripheral_file"                       value="ftfl_32k_flexrom" />
+   <item key="/FTM1/irqHandlingMethod"                     value="$ClassMethod" />
    <item key="/MCG/ClockConfig[0]"                         value="ClockConfig_PEE_48MHz" />
    <item key="/MCG/ClockConfig[1]"                         value="ClockConfig_BLPE_4MHz" />
    <item key="/MCG/ClockConfig[2]"                         value="ClockConfig_FEE_40MHz" />
