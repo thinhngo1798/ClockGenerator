@@ -1,5 +1,8 @@
-Sources/main.o Sources/main.o: ../Sources/main.cpp ../Sources/lcd.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/delay.h \
+Sources/clockControl.o Sources/clockControl.o: \
+ ../Sources/clockControl.cpp ../Sources/clockControl.h \
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h \
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/error.h \
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pin_mapping.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/derivative.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/MK20D5.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/core_cm4.h \
@@ -8,10 +11,6 @@ Sources/main.o Sources/main.o: ../Sources/main.cpp ../Sources/lcd.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/core_cmFunc.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/core_cmSimd.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/system.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/spi.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/error.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pin_mapping.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pcr.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/bitband.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/adc.h \
@@ -20,16 +19,20 @@ Sources/main.o Sources/main.o: ../Sources/main.cpp ../Sources/lcd.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/delay.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/console.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/derivative.h \
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart_queue.h \
- ../Sources/fonts.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h \
- ../Sources/ClockGenerator.h
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pit.h \
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/smc.h
 
-../Sources/lcd.h:
+../Sources/clockControl.h:
 
-C:/Users/trang/Documents/workspace/LabE4/Project_Headers/delay.h:
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h:
+
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/error.h:
+
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pin_mapping.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/derivative.h:
 
@@ -47,14 +50,6 @@ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/core_cmSimd.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/system.h:
 
-C:/Users/trang/Documents/workspace/LabE4/Project_Headers/spi.h:
-
-C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h:
-
-C:/Users/trang/Documents/workspace/LabE4/Project_Headers/error.h:
-
-C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pin_mapping.h:
-
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pcr.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/bitband.h:
@@ -71,14 +66,14 @@ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/console.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/derivative.h:
 
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h:
+
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart_queue.h:
 
-../Sources/fonts.h:
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pit.h:
 
-C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h:
-
-../Sources/ClockGenerator.h:
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/smc.h:

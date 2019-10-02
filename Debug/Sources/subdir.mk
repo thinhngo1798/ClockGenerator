@@ -4,35 +4,47 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../Sources/ClockGenerator.cpp \
+../Sources/clockControl.cpp \
 ../Sources/delay.cpp \
 ../Sources/fonts.cpp \
 ../Sources/ftfl.cpp \
 ../Sources/hardware.cpp \
 ../Sources/i2c.cpp \
+../Sources/indicator.cpp \
 ../Sources/lcd.cpp \
 ../Sources/main.cpp \
+../Sources/sevenSegment.cpp \
 ../Sources/spi.cpp \
 ../Sources/usbdmError.cpp 
 
 OBJS += \
+./Sources/ClockGenerator.o \
+./Sources/clockControl.o \
 ./Sources/delay.o \
 ./Sources/fonts.o \
 ./Sources/ftfl.o \
 ./Sources/hardware.o \
 ./Sources/i2c.o \
+./Sources/indicator.o \
 ./Sources/lcd.o \
 ./Sources/main.o \
+./Sources/sevenSegment.o \
 ./Sources/spi.o \
 ./Sources/usbdmError.o 
 
 CPP_DEPS += \
+./Sources/ClockGenerator.d \
+./Sources/clockControl.d \
 ./Sources/delay.d \
 ./Sources/fonts.d \
 ./Sources/ftfl.d \
 ./Sources/hardware.d \
 ./Sources/i2c.d \
+./Sources/indicator.d \
 ./Sources/lcd.d \
 ./Sources/main.d \
+./Sources/sevenSegment.d \
 ./Sources/spi.d \
 ./Sources/usbdmError.d 
 

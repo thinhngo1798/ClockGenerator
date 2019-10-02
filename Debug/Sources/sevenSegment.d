@@ -1,4 +1,5 @@
-Sources/main.o Sources/main.o: ../Sources/main.cpp ../Sources/lcd.h \
+Sources/sevenSegment.o Sources/sevenSegment.o: \
+ ../Sources/sevenSegment.cpp ../Sources/sevenSegment.h ../Sources/lcd.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/delay.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/derivative.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/MK20D5.h \
@@ -24,8 +25,9 @@ Sources/main.o Sources/main.o: ../Sources/main.cpp ../Sources/lcd.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart_queue.h \
  ../Sources/fonts.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h \
- ../Sources/ClockGenerator.h
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h
+
+../Sources/sevenSegment.h:
 
 ../Sources/lcd.h:
 
@@ -80,5 +82,3 @@ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart_queue.h:
 ../Sources/fonts.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h:
-
-../Sources/ClockGenerator.h:

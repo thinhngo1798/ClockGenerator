@@ -86,7 +86,7 @@ void initialiseClockControl()
 		      PinFilter_Passive);
 
 	 Timer::configure(PitDebugMode_Stop);
-	 Timer::setCallback(deBouncer);
+	 TimerChannel::setCallback(deBouncer);
 	 TimerChannel::configure(DEBOUNCE_SAMPLE_TIME,  PitChannelIrq_Enabled);
 	 TimerChannel::enableNvicInterrupts(NvicPriority_Normal);
 	 checkError();

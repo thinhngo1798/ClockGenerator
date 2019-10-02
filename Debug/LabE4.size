@@ -1,29 +1,29 @@
 LabE4.elf  :
 section              size        addr
 .interrupts          1040           0
-.text               22124        1040
-.ARM.exidx              8       23164
-.flash                  0       23172
+.text               15360        1040
+.ARM.exidx              8       16400
+.flash                  0       16408
 .mtb                    0   536862720
 .interrupts_ram         0   536862720
-.data                 128   536862720
-.noinit                 0   536862848
-.bss                  156   536862848
-.heap                4096   536863004
+.data                 200   536862720
+.noinit                 0   536862920
+.bss                  116   536862920
+.heap                4096   536863036
 .stack               8192   536870912
 .flexRAM                0   335544320
 .flexNVM                0   268435456
 .bitband           262144   570425344
 .ARM.attributes        42           0
 .comment              117           0
-.debug_info        724736           0
-.debug_abbrev       31924           0
-.debug_aranges       2896           0
-.debug_ranges        2672           0
-.debug_macro        74244           0
-.debug_line         49511           0
-.debug_str         434277           0
-.debug_frame        12864           0
-Total             1631171
+.debug_info        537571           0
+.debug_abbrev       24142           0
+.debug_aranges       1856           0
+.debug_ranges        1680           0
+.debug_macro        70488           0
+.debug_line         34974           0
+.debug_str         372529           0
+.debug_frame         8368           0
+Total             1342923
 
 

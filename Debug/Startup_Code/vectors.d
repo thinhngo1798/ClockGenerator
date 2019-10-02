@@ -22,7 +22,9 @@ Startup_Code/vectors.o Startup_Code/vectors.o: \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h \
- C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart_queue.h
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart_queue.h \
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/ftm.h \
+ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pit.h
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/derivative.h:
 
@@ -69,3 +71,7 @@ C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart.h:
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/formatted_io.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/uart_queue.h:
+
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/ftm.h:
+
+C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pit.h:

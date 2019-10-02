@@ -6,12 +6,8 @@
 #ifndef SOURCES_CLOCKGENERATOR_H_
 #define SOURCES_CLOCKGENERATOR_H_
 
-<<<<<<< HEAD
-static constexpr unsigned MIN_FREQUENCY = 1000;
-=======
-static constexpr unsigned MIN_FREQUENCY = 100;
->>>>>>> master
-static constexpr unsigned MAX_FREQUENCY = 100000;
+static constexpr unsigned MIN_FREQUENCY = 5;
+static constexpr unsigned MAX_FREQUENCY = 5000000;
 
 /**
  * Initialise the generator before first use
@@ -23,12 +19,12 @@ void generatorInitialise();
  *
  * @param frequency [MIN_FREQUENCY ... MAX_FREQUENCY]
  */
-<<<<<<< HEAD
+
 //void generatorSetFrequency(unsigned frequency);
 //
 //#endif /* SOURCES_CLOCKGENERATOR_H_ */
-=======
+
 void generatorSetFrequency(unsigned frequency);
 
 #endif /* SOURCES_CLOCKGENERATOR_H_ */
->>>>>>> master
+

@@ -22,8 +22,9 @@
 #include "spi.h"
 #include "delay.h"
 
-#include "indicator.h"
-#include "clockControl.h"
+//#include "indicator.h"
+//#include "clockControl.h"
+#include "ClockGenerator.h"
 
 // Access to USBDM name-space
 using namespace USBDM;
@@ -37,9 +38,11 @@ using Centre_Switch = GpioD<5,ActiveLow>;
 //using West_Switch = GpioB<1,ActiveLow>;
 //using East_Switch = GpioC<1,ActiveLow>;
 
+
 static constexpr bool ON = true;
 static constexpr bool OFF = false;
 
+static constexpr int REAL_MIN_FREQUENCY =1;
 static int currentStatus = OFF;
 
 static int frequency_index = 0;
@@ -56,47 +59,6 @@ const int frequency[20] = 	{
 								1000000, 2000000
 							};
 
-/* **************************************************
- *  Globally shared objects representing hardware
- * ************************************************ */
-
-//// SPI interface
-//Spi0 spi;
-//
-//// LCD interface using SPI
-//Lcd lcd(spi);
-//
-///* ************************************************** */
-//
-//// LCD derived dimensions
-////static constexpr unsigned LCD_WIDTH  = (LCD_X_MAX-LCD_X_MIN);
-////static constexpr unsigned LCD_HEIGHT = (LCD_Y_MAX-LCD_Y_MIN);
-////static constexpr unsigned CENTRE_X   = ((LCD_X_MAX-LCD_X_MIN)/2);
-////static constexpr unsigned CENTRE_Y   = ((LCD_Y_MAX-LCD_Y_MIN)/2);
-//
-//// Colour for LCD background
-//static constexpr Colour BACKGROUND_COLOUR = (RED);
-//
-//// Colour for LCD foreground
-//static constexpr Colour FOREGROUND_COLOUR = (WHITE);
-//
-//// Radius used for the moving circle
-//static constexpr unsigned CIRCLE_RADIUS = (20);
-//
-///*
-// * Draws a cursor on the lcd screen
-// *
-// * @param x       x position
-// * @param y       y position
-// * @param colour  Colour of cursor
-// *
-// * @note Done this way so a more sophisticated cursor can be added
-// */
-//void drawCursor(unsigned x, unsigned y, Colour colour) {
-//   lcd.drawCircle(x, y, CIRCLE_RADIUS, colour);
-////   lcd.drawRect(x-CIRCLE_RADIUS/2, y-1, x+CIRCLE_RADIUS/2, y+1, false, colour);
-////   lcd.drawRect(x-1, y-CIRCLE_RADIUS/2, x+1, y+CIRCLE_RADIUS/2, false, colour);
-//}
 
 void incrementIndex()
 {
@@ -123,36 +85,53 @@ void toggleStatus()
 
 int main()
 {
-	int lastFrequency = 0;
-	Indicator lcdIndicator = Indicator();
-	initialiseClockControl();
-	for (;;)
-	{
-		Smc::enterWaitMode();
+//	int lastFrequency = 0;
+//	Indicator lcdIndicator = Indicator();
+//	initialiseClockControl();
+//	for (;;)
+//	{
+//		Smc::enterWaitMode();
+//
+//		if (getNorthPress())
+//		{
+//			incrementIndex();
+//		}
+//
+//		if (getSouthPress())
+//		{
+//			decrementIndex();
+//		}
+//
+//		if (getCentrePress())
+//		{
+//			toggleStatus();
+//		}
+//
+//		int currentFrequency = 	frequency[frequency_index];
+//
+//		if (currentFrequency != lastFrequency)
+//		{
+//			lcdIndicator.display(currentFrequency);
+//		}
+//		lastFrequency = currentFrequency;
+//	}
+	//Testing middle range f
+	console.writeln("\nStarting\n");
+	   generatorInitialise();
 
-		if (getNorthPress())
-		{
-			incrementIndex();
-		}
-
-		if (getSouthPress())
-		{
-			decrementIndex();
-		}
-
-		if (getCentrePress())
-		{
-			toggleStatus();
-		}
-
-		int currentFrequency = 	frequency[frequency_index];
-
-		if (currentFrequency != lastFrequency)
-		{
-			lcdIndicator.display(currentFrequency);
-		}
-		lastFrequency = currentFrequency;
-	}
+	   for(;;) {
+	      unsigned frequency;
+	      console.write("Frequency[")
+	            .write(MIN_FREQUENCY)
+	            .write("..")
+	            .write(MAX_FREQUENCY).write("]")
+	            .readln(frequency);
+	      if ((frequency<REAL_MIN_FREQUENCY) || (frequency>MAX_FREQUENCY)) {
+	         console.writeln("Frequency out of range");
+	         continue;
+	      }
+	      generatorSetFrequency(frequency);
+	   }
 	return 0;
 }
 

@@ -33,9 +33,15 @@ using namespace USBDM;
  */
 using Timer = Ftm1;
 
+using generateGround = GpioA<2>;
 /// Timer channel for output - change as required
 
 using TimerChannel = Timer::Channel<1>;
+
+
+int input1Hz=0;
+int input2Hz=0;
+int eventCounter=0;
 
 /**
  * Half-period for timer in ticks.
@@ -44,10 +50,10 @@ using TimerChannel = Timer::Channel<1>;
 static volatile uint16_t timerHalfPeriodInTicks;
 
 /// Waveform period to generate
-static constexpr float WAVEFORM_PERIOD = 100*ms;
+static constexpr float WAVEFORM_PERIOD = 1*ms;
 
 /// Maximum OC interval - the OC interval should not exceed this value.
-static constexpr float MAX_OC_INTERVAL = (1.1 * WAVEFORM_PERIOD)/2;
+//static constexpr float MAX_OC_INTERVAL = (1.1 * WAVEFORM_PERIOD)/2;
 
 /**
  * Interrupt handler for Timer interrupts
@@ -59,18 +65,50 @@ static void ftmCallback(uint8_t status) {
 
    // Check channel
    if (status & TimerChannel::CHANNEL_MASK) {
-      // Note: The pin is toggled directly by hardware
-      // Re-trigger at last interrupt time + timerHalfPeriodInTicks
-      TimerChannel::setDeltaEventTime(timerHalfPeriodInTicks);
+	  if (((input1Hz==1) || (input2Hz==1)) && (TimerChannel::getMode()==FtmChMode_OutputCompareToggle))
+		  TimerChannel::setMode(FtmChMode_OutputCompareSet);
+	  if ((input1Hz==0) && (input2Hz==0))
+		  TimerChannel::setMode(FtmChMode_OutputCompareToggle);
+	  switch (TimerChannel::getMode()) {
+	  case FtmChMode_OutputCompareToggle:
+		  TimerChannel::setDeltaEventTime(timerHalfPeriodInTicks);
+		  break;
+	  case FtmChMode_OutputCompareSet: {
+		  eventCounter++;
+		  if (eventCounter==10)
+		  {
+			  eventCounter=0;
+			  TimerChannel::setMode(FtmChMode_OutputCompareClear);
+		  }
+		  TimerChannel::setDeltaEventTime(timerHalfPeriodInTicks);
+		  break;
+	  }
+	  case FtmChMode_OutputCompareClear: {
+		  eventCounter++;
+		   if (eventCounter==10)
+		   {
+		   eventCounter=0;
+		  TimerChannel::setMode(FtmChMode_OutputCompareSet);
+		   }
+		   TimerChannel::setDeltaEventTime(timerHalfPeriodInTicks);
+		   break;
+	  }
+	  default:
+	  __asm__("bkpt");
+	  }
    }
 }
 
 
 
 void generatorInitialise(){
-	   /**
+
+	//Generate a ground to use for Logic Analyser.
+	generateGround::setOutput(PinDriveStrength_Low, PinDriveMode_PushPull, PinSlewRate_Slow);
+	generateGround::write(0);
+	/**
 	    * FTM channel set as Output compare with pin Toggle mode and using a callback function
-	    */
+	*/
 	// Configure base FTM (affects all channels)
 	   Timer::configure(
 	         FtmMode_LeftAlign,       // Left-aligned is required for OC/IC
@@ -78,7 +116,6 @@ void generatorInitialise(){
 
 	   // Set IC/OC measurement interval to longest interval needed.
 	   // This adjusts the prescaler value but does not change the clock source
-
 
 	   Timer::setMaximumInterval(1.1*0.5/MIN_FREQUENCY);
 
@@ -117,8 +154,24 @@ void generatorInitialise(){
  * @param frequency [MIN_FREQUENCY ... MAX_FREQUENCY]
  */
 void generatorSetFrequency(unsigned frequency){
-	timerHalfPeriodInTicks=Timer::convertSecondsToTicks(0.5/frequency);
-
+	//Timer::setPeriod(frequency*us, true);
+	int fakeFrequency;
+	if (frequency == 1) {
+	input1Hz=1;
+	fakeFrequency=10;
+	}
+	else if (frequency == 2)
+	{
+	input2Hz=1;
+	fakeFrequency=20;
+	}
+	else
+	{
+		input1Hz=0;
+		input2Hz=0;
+	fakeFrequency=frequency; // The frequency applies as normal.There is no fake frequency.
+	}
+	timerHalfPeriodInTicks=Timer::convertSecondsToTicks(0.5/fakeFrequency);
 }
 
 
