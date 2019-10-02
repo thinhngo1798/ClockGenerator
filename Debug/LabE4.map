@@ -27,9 +27,9 @@ c:/program files (x86)/eclipse foundation/eclipse cdt/gnu tools arm embedded/8 2
 c:/program files (x86)/eclipse foundation/eclipse cdt/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
                               ./Sources/spi.o (__aeabi_fcmplt)
 c:/program files (x86)/eclipse foundation/eclipse cdt/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixsfsi.o)
-                              ./Sources/clockControl.o (__aeabi_f2iz)
+                              ./Sources/delay.o (__aeabi_f2iz)
 c:/program files (x86)/eclipse foundation/eclipse cdt/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixunssfsi.o)
-                              ./Sources/clockControl.o (__aeabi_f2uiz)
+                              ./Sources/jogStick.o (__aeabi_f2uiz)
 c:/program files (x86)/eclipse foundation/eclipse cdt/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_aeabi_uldivmod.o)
                               ./Sources/delay.o (__aeabi_uldivmod)
 c:/program files (x86)/eclipse foundation/eclipse cdt/gnu tools arm embedded/8 2018-q4-major/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixunssfdi.o)
@@ -1815,391 +1815,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x17 ./Sources/ClockGenerator.o
  .debug_macro   0x00000000       0x10 ./Sources/ClockGenerator.o
  .debug_macro   0x00000000       0x4c ./Sources/ClockGenerator.o
- .group         0x00000000       0x14 ./Sources/clockControl.o
- .group         0x00000000       0x14 ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0x8 ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .group         0x00000000        0xc ./Sources/clockControl.o
- .text          0x00000000        0x0 ./Sources/clockControl.o
- .data          0x00000000        0x0 ./Sources/clockControl.o
- .bss           0x00000000        0x0 ./Sources/clockControl.o
- .text._ZN5USBDML12setErrorCodeENS_9ErrorCodeE
-                0x00000000       0x20 ./Sources/clockControl.o
- .text._ZN5USBDML20setAndCheckErrorCodeENS_9ErrorCodeE
-                0x00000000       0x20 ./Sources/clockControl.o
- .text._ZN5USBDM13_usbdm_assertEPKc
-                0x00000000       0x16 ./Sources/clockControl.o
- .rodata._ZN5USBDML2nsE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML2usE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML2msE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML7secondsE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML7percentE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML3MHzE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML3kHzE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML2HzE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML12FIXED_NO_PCRE
-                0x00000000        0x1 ./Sources/clockControl.o
- .rodata._ZN5USBDML11INVALID_PCRE
-                0x00000000        0x1 ./Sources/clockControl.o
- .rodata._ZN5USBDML12UNMAPPED_PCRE
-                0x00000000        0x1 ./Sources/clockControl.o
- .text._ZN5USBDML16enablePortClocksEm
-                0x00000000       0x34 ./Sources/clockControl.o
- .rodata._ZN5USBDML16PORTA_CLOCK_MASKE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML16PORTB_CLOCK_MASKE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML16PORTC_CLOCK_MASKE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML16PORTD_CLOCK_MASKE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML16PORTE_CLOCK_MASKE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML11DEFAULT_PCRE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML16GPIO_DEFAULT_PCRE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML15I2C_DEFAULT_PCRE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML15I2S_DEFAULT_PCRE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML16XTAL_DEFAULT_PCRE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML10NoPortInfoE
-                0x00000000        0xc ./Sources/clockControl.o
- .rodata._ZN5USBDML13PORTA_IRQS_ARE
-                0x00000000        0x1 ./Sources/clockControl.o
- .rodata._ZN5USBDML9PortAInfoE
-                0x00000000        0xc ./Sources/clockControl.o
- .rodata._ZN5USBDML13PORTB_IRQS_ARE
-                0x00000000        0x1 ./Sources/clockControl.o
- .rodata._ZN5USBDML9PortBInfoE
-                0x00000000        0xc ./Sources/clockControl.o
- .rodata._ZN5USBDML13PORTC_IRQS_ARE
-                0x00000000        0x1 ./Sources/clockControl.o
- .rodata._ZN5USBDML9PortCInfoE
-                0x00000000        0xc ./Sources/clockControl.o
- .rodata._ZN5USBDML13PORTD_IRQS_ARE
-                0x00000000        0x1 ./Sources/clockControl.o
- .rodata._ZN5USBDML9PortDInfoE
-                0x00000000        0xc ./Sources/clockControl.o
- .rodata._ZN5USBDML13PORTE_IRQS_ARE
-                0x00000000        0x1 ./Sources/clockControl.o
- .rodata._ZN5USBDML9PortEInfoE
-                0x00000000        0xc ./Sources/clockControl.o
- .rodata._ZN5USBDML12MAP_ALL_PINSE
-                0x00000000        0x1 ./Sources/clockControl.o
- .text._ZN5USBDM7PitInfo11enableClockEv
-                0x00000000       0x28 ./Sources/clockControl.o
- .rodata._ZN5USBDML15ADC_DEFAULT_PCRE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML10TIMER_MASKE
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZN5USBDML15defaultBaudRateE
-                0x00000000        0x4 ./Sources/clockControl.o
- .text._ZN5USBDMplENS_13PitChannelNumEj
-                0x00000000       0x1a ./Sources/clockControl.o
- .text._ZN5USBDMplENS_13PitChannelNumEi
-                0x00000000       0x1e ./Sources/clockControl.o
- .rodata._ZL20DEBOUNCE_SAMPLE_TIME
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata._ZL16DEBOUNCE_SAMPLES
-                0x00000000        0x4 ./Sources/clockControl.o
- .bss._ZL10northValue
-                0x00000000        0x1 ./Sources/clockControl.o
- .bss._ZL10southValue
-                0x00000000        0x1 ./Sources/clockControl.o
- .bss._ZL11centreValue
-                0x00000000        0x1 ./Sources/clockControl.o
- .bss._ZZ9deBouncervE12northCounter
-                0x00000000        0x4 ./Sources/clockControl.o
- .bss._ZZ9deBouncervE12southCounter
-                0x00000000        0x4 ./Sources/clockControl.o
- .bss._ZZ9deBouncervE13centreCounter
-                0x00000000        0x4 ./Sources/clockControl.o
- .bss._ZZ9deBouncervE14lastNorthValue
-                0x00000000        0x1 ./Sources/clockControl.o
- .bss._ZZ9deBouncervE14lastSouthValue
-                0x00000000        0x1 ./Sources/clockControl.o
- .bss._ZZ9deBouncervE15lastCentreValue
-                0x00000000        0x1 ./Sources/clockControl.o
- .text._Z9deBouncerv
-                0x00000000       0xe0 ./Sources/clockControl.o
- .text._Z22initialiseClockControlv
-                0x00000000       0x60 ./Sources/clockControl.o
- .text._Z13getNorthPressv
-                0x00000000       0x3c ./Sources/clockControl.o
- .text._Z13getSouthPressv
-                0x00000000       0x3c ./Sources/clockControl.o
- .text._Z14getCentrePressv
-                0x00000000       0x3c ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
-                0x00000000       0x2c ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
-                0x00000000       0x2c ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
-                0x00000000       0x2c ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE9configureENS_12PitDebugModeE
-                0x00000000       0x48 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE7ChannelILi0EE11setCallbackEPFvvE
-                0x00000000       0x18 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE7ChannelILi0EE20enableNvicInterruptsEm
-                0x00000000       0x18 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE8setInputEm
-                0x00000000       0x24 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE8setInputEm
-                0x00000000       0x24 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE8setInputEm
-                0x00000000       0x24 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE6enableEv
-                0x00000000       0x10 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE14disableChannelENS_13PitChannelNumE
-                0x00000000       0x30 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE11setCallbackENS_13PitChannelNumEPFvvE
-                0x00000000       0x34 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE16configureChannelENS_13PitChannelNumEfNS_13PitChannelIrqE
-                0x00000000       0x2a ./Sources/clockControl.o
- .rodata._ZZN5USBDM9PitBase_TINS_7PitInfoEE20enableNvicInterruptsENS_13PitChannelNumEmE7irqNums
-                0x00000000        0x4 ./Sources/clockControl.o
- .rodata        0x00000000      0x1b1 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE20enableNvicInterruptsENS_13PitChannelNumEm
-                0x00000000       0x38 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE16enableInterruptsENS_13PitChannelNumEb
-                0x00000000       0x58 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE4readEv
-                0x00000000        0xe ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE4readEv
-                0x00000000        0xe ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE4readEv
-                0x00000000        0xe ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE5setInEv
-                0x00000000       0x16 ./Sources/clockControl.o
- .text._ZN5USBDM5Pcr_TILm2048ELm1074049024EL9IRQn_Type42ELi0ELm256EE6setPCREm
-                0x00000000       0x22 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE5setInEv
-                0x00000000       0x16 ./Sources/clockControl.o
- .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi6ELm256EE6setPCREm
-                0x00000000       0x22 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE5setInEv
-                0x00000000       0x16 ./Sources/clockControl.o
- .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi5ELm256EE6setPCREm
-                0x00000000       0x22 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE17unhandledCallbackEv
-                0x00000000        0xe ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE23configureChannelInTicksENS_13PitChannelNumEmNS_13PitChannelIrqE
-                0x00000000       0x74 ./Sources/clockControl.o
- .text._ZN5USBDM9PitBase_TINS_7PitInfoEE21convertSecondsToTicksEf
-                0x00000000       0xac ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE5isLowEv
-                0x00000000       0x1e ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE5isLowEv
-                0x00000000       0x1e ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE5isLowEv
-                0x00000000       0x1e ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE4gpioEv
-                0x00000000       0x14 ./Sources/clockControl.o
- .text._ZN5USBDM5Pcr_TILm2048ELm1074049024EL9IRQn_Type42ELi0ELm256EE6pcrRegEv
-                0x00000000       0x14 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE4gpioEv
-                0x00000000       0x14 ./Sources/clockControl.o
- .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi6ELm256EE6pcrRegEv
-                0x00000000       0x14 ./Sources/clockControl.o
- .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE4gpioEv
-                0x00000000       0x14 ./Sources/clockControl.o
- .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi5ELm256EE6pcrRegEv
-                0x00000000       0x14 ./Sources/clockControl.o
- .data._ZN5USBDM9PitBase_TINS_7PitInfoEE17allocatedChannelsE
-                0x00000000        0x4 ./Sources/clockControl.o
- .data._ZN5USBDM9PitBase_TINS_7PitInfoEE10sCallbacksE
-                0x00000000       0x10 ./Sources/clockControl.o
- .debug_info    0x00000000    0x118d6 ./Sources/clockControl.o
- .debug_abbrev  0x00000000      0xb81 ./Sources/clockControl.o
- .debug_aranges
-                0x00000000      0x198 ./Sources/clockControl.o
- .debug_ranges  0x00000000      0x188 ./Sources/clockControl.o
- .debug_macro   0x00000000      0x490 ./Sources/clockControl.o
- .debug_macro   0x00000000      0xbc8 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x1c ./Sources/clockControl.o
- .debug_macro   0x00000000       0x22 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x8e ./Sources/clockControl.o
- .debug_macro   0x00000000       0x51 ./Sources/clockControl.o
- .debug_macro   0x00000000       0xef ./Sources/clockControl.o
- .debug_macro   0x00000000       0x6a ./Sources/clockControl.o
- .debug_macro   0x00000000      0x1df ./Sources/clockControl.o
- .debug_macro   0x00000000       0x26 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x10 ./Sources/clockControl.o
- .debug_macro   0x00000000      0x17b ./Sources/clockControl.o
- .debug_macro   0x00000000       0x34 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x3b ./Sources/clockControl.o
- .debug_macro   0x00000000       0x50 ./Sources/clockControl.o
- .debug_macro   0x00000000      0xbc6 ./Sources/clockControl.o
- .debug_macro   0x00000000     0x83ec ./Sources/clockControl.o
- .debug_macro   0x00000000      0x15b ./Sources/clockControl.o
- .debug_macro   0x00000000      0x16e ./Sources/clockControl.o
- .debug_macro   0x00000000       0x10 ./Sources/clockControl.o
- .debug_macro   0x00000000      0x3fb ./Sources/clockControl.o
- .debug_macro   0x00000000       0x5e ./Sources/clockControl.o
- .debug_macro   0x00000000      0x35c ./Sources/clockControl.o
- .debug_macro   0x00000000       0x7c ./Sources/clockControl.o
- .debug_macro   0x00000000       0x17 ./Sources/clockControl.o
- .debug_macro   0x00000000       0xee ./Sources/clockControl.o
- .debug_macro   0x00000000       0x1c ./Sources/clockControl.o
- .debug_macro   0x00000000       0x28 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x16 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x18 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x18 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x35 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x34 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x58 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x1f ./Sources/clockControl.o
- .debug_macro   0x00000000       0x43 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x20 ./Sources/clockControl.o
- .debug_macro   0x00000000      0x18e ./Sources/clockControl.o
- .debug_macro   0x00000000      0x1da ./Sources/clockControl.o
- .debug_macro   0x00000000       0x10 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x16 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x35 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x16 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x29 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x10 ./Sources/clockControl.o
- .debug_macro   0x00000000      0x3ce ./Sources/clockControl.o
- .debug_macro   0x00000000       0x16 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x1c ./Sources/clockControl.o
- .debug_macro   0x00000000       0x6e ./Sources/clockControl.o
- .debug_macro   0x00000000       0x28 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x86 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x18 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x2e ./Sources/clockControl.o
- .debug_macro   0x00000000       0x1f ./Sources/clockControl.o
- .debug_macro   0x00000000       0x76 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x19 ./Sources/clockControl.o
- .debug_macro   0x00000000      0x120 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x11 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x11 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x17 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x17 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x17 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x17 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x17 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x10 ./Sources/clockControl.o
- .debug_macro   0x00000000       0x4c ./Sources/clockControl.o
- .debug_line    0x00000000     0x12e0 ./Sources/clockControl.o
- .debug_str     0x00000000    0x579c6 ./Sources/clockControl.o
- .comment       0x00000000       0x76 ./Sources/clockControl.o
- .debug_frame   0x00000000      0x67c ./Sources/clockControl.o
- .ARM.attributes
-                0x00000000       0x2e ./Sources/clockControl.o
  .group         0x00000000        0xc ./Sources/delay.o
  .group         0x00000000        0xc ./Sources/delay.o
  .group         0x00000000        0xc ./Sources/delay.o
@@ -3729,6 +3344,466 @@ Discarded input sections
  .debug_frame   0x00000000      0xd28 ./Sources/indicator.o
  .ARM.attributes
                 0x00000000       0x2e ./Sources/indicator.o
+ .group         0x00000000       0x14 ./Sources/jogStick.o
+ .group         0x00000000       0x14 ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000       0x10 ./Sources/jogStick.o
+ .group         0x00000000       0x10 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0x8 ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .group         0x00000000        0xc ./Sources/jogStick.o
+ .text          0x00000000        0x0 ./Sources/jogStick.o
+ .data          0x00000000        0x0 ./Sources/jogStick.o
+ .bss           0x00000000        0x0 ./Sources/jogStick.o
+ .text._ZN5USBDML12setErrorCodeENS_9ErrorCodeE
+                0x00000000       0x20 ./Sources/jogStick.o
+ .text._ZN5USBDML20setAndCheckErrorCodeENS_9ErrorCodeE
+                0x00000000       0x20 ./Sources/jogStick.o
+ .text._ZN5USBDM13_usbdm_assertEPKc
+                0x00000000       0x16 ./Sources/jogStick.o
+ .rodata._ZN5USBDML2nsE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML2usE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML2msE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML7secondsE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML7percentE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML3MHzE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML3kHzE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML2HzE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .text.NVIC_EnableIRQ
+                0x00000000       0x34 ./Sources/jogStick.o
+ .text.NVIC_DisableIRQ
+                0x00000000       0x34 ./Sources/jogStick.o
+ .rodata._ZN5USBDML12FIXED_NO_PCRE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .rodata._ZN5USBDML11INVALID_PCRE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .rodata._ZN5USBDML12UNMAPPED_PCRE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .text._ZN5USBDML16enablePortClocksEm
+                0x00000000       0x34 ./Sources/jogStick.o
+ .rodata._ZN5USBDML16PORTA_CLOCK_MASKE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML16PORTB_CLOCK_MASKE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML16PORTC_CLOCK_MASKE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML16PORTD_CLOCK_MASKE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML16PORTE_CLOCK_MASKE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML11DEFAULT_PCRE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML16GPIO_DEFAULT_PCRE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML15I2C_DEFAULT_PCRE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML15I2S_DEFAULT_PCRE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML16XTAL_DEFAULT_PCRE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML10NoPortInfoE
+                0x00000000        0xc ./Sources/jogStick.o
+ .rodata._ZN5USBDML13PORTA_IRQS_ARE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .rodata._ZN5USBDML9PortAInfoE
+                0x00000000        0xc ./Sources/jogStick.o
+ .rodata._ZN5USBDML13PORTB_IRQS_ARE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .rodata._ZN5USBDML9PortBInfoE
+                0x00000000        0xc ./Sources/jogStick.o
+ .rodata._ZN5USBDML13PORTC_IRQS_ARE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .rodata._ZN5USBDML9PortCInfoE
+                0x00000000        0xc ./Sources/jogStick.o
+ .rodata._ZN5USBDML13PORTD_IRQS_ARE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .rodata._ZN5USBDML9PortDInfoE
+                0x00000000        0xc ./Sources/jogStick.o
+ .rodata._ZN5USBDML13PORTE_IRQS_ARE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .rodata._ZN5USBDML9PortEInfoE
+                0x00000000        0xc ./Sources/jogStick.o
+ .rodata._ZN5USBDML12MAP_ALL_PINSE
+                0x00000000        0x1 ./Sources/jogStick.o
+ .text._ZN5USBDM7PitInfo11enableClockEv
+                0x00000000       0x28 ./Sources/jogStick.o
+ .rodata._ZN5USBDML15ADC_DEFAULT_PCRE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZN5USBDML10TIMER_MASKE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO9writeCharEc
+                0x00000000       0x24 ./Sources/jogStick.o
+ .rodata        0x00000000      0x29d ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO5ultoaEPcmNS_5RadixENS_7PaddingEib
+                0x00000000      0x170 ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO5writeEc
+                0x00000000       0x20 ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO7writelnEv
+                0x00000000       0x1a ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO5writeEPKc
+                0x00000000       0x2e ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO5writeElNS_5RadixE
+                0x00000000       0x5a ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO7writelnElNS_5RadixE
+                0x00000000       0x2a ./Sources/jogStick.o
+ .text._ZN5USBDM11FormattedIO7writelnEiNS_5RadixE
+                0x00000000       0x24 ./Sources/jogStick.o
+ .rodata._ZN5USBDML15defaultBaudRateE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .text._ZN5USBDMplENS_13PitChannelNumEj
+                0x00000000       0x1a ./Sources/jogStick.o
+ .text._ZN5USBDMplENS_13PitChannelNumEi
+                0x00000000       0x1e ./Sources/jogStick.o
+ .rodata._ZL20DEBOUNCE_SAMPLE_TIME
+                0x00000000        0x4 ./Sources/jogStick.o
+ .rodata._ZL16DEBOUNCE_SAMPLES
+                0x00000000        0x4 ./Sources/jogStick.o
+ .data._ZL11switchValue
+                0x00000000        0x1 ./Sources/jogStick.o
+ .bss._ZZ9deBouncervE13switchCounter
+                0x00000000        0x4 ./Sources/jogStick.o
+ .bss._ZZ9deBouncervE10lastSwitch
+                0x00000000        0x4 ./Sources/jogStick.o
+ .text._Z9deBouncerv
+                0x00000000      0x104 ./Sources/jogStick.o
+ .text._Z22initialiseClockControlv
+                0x00000000       0x74 ./Sources/jogStick.o
+ .text._Z17getJogswitchValuev
+                0x00000000       0x28 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE4readEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj1ELNS_8PolarityE0EE4readEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE4readEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE4readEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm1024ELm1074044928EL9IRQn_Type41ELm1074786368ELj1ELNS_8PolarityE0EE4readEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
+                0x00000000       0x2c ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj1ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
+                0x00000000       0x2c ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
+                0x00000000       0x2c ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
+                0x00000000       0x2c ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm1024ELm1074044928EL9IRQn_Type41ELm1074786368ELj1ELNS_8PolarityE0EE8setInputENS_7PinPullENS_9PinActionENS_9PinFilterE
+                0x00000000       0x2c ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE9configureENS_12PitDebugModeE
+                0x00000000       0x48 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE7ChannelILi0EE11setCallbackEPFvvE
+                0x00000000       0x18 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE7ChannelILi0EE20enableNvicInterruptsEm
+                0x00000000       0x18 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE7ChannelILi0EE21disableNvicInterruptsEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE7ChannelILi0EE20enableNvicInterruptsEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE5isLowEv
+                0x00000000       0x1e ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj1ELNS_8PolarityE0EE5isLowEv
+                0x00000000       0x1e ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE5isLowEv
+                0x00000000       0x1e ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE5isLowEv
+                0x00000000       0x1e ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm1024ELm1074044928EL9IRQn_Type41ELm1074786368ELj1ELNS_8PolarityE0EE5isLowEv
+                0x00000000       0x1e ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE8setInputEm
+                0x00000000       0x24 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj1ELNS_8PolarityE0EE8setInputEm
+                0x00000000       0x24 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE8setInputEm
+                0x00000000       0x24 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE8setInputEm
+                0x00000000       0x24 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm1024ELm1074044928EL9IRQn_Type41ELm1074786368ELj1ELNS_8PolarityE0EE8setInputEm
+                0x00000000       0x24 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE6enableEv
+                0x00000000       0x10 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE14disableChannelENS_13PitChannelNumE
+                0x00000000       0x30 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE11setCallbackENS_13PitChannelNumEPFvvE
+                0x00000000       0x34 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE16configureChannelENS_13PitChannelNumEfNS_13PitChannelIrqE
+                0x00000000       0x2a ./Sources/jogStick.o
+ .rodata._ZZN5USBDM9PitBase_TINS_7PitInfoEE20enableNvicInterruptsENS_13PitChannelNumEmE7irqNums
+                0x00000000        0x4 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE20enableNvicInterruptsENS_13PitChannelNumEm
+                0x00000000       0x38 ./Sources/jogStick.o
+ .rodata._ZZN5USBDM9PitBase_TINS_7PitInfoEE21disableNvicInterruptsENS_13PitChannelNumEE7irqNums
+                0x00000000        0x4 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE21disableNvicInterruptsENS_13PitChannelNumE
+                0x00000000       0x34 ./Sources/jogStick.o
+ .rodata._ZZN5USBDM9PitBase_TINS_7PitInfoEE20enableNvicInterruptsENS_13PitChannelNumEE7irqNums
+                0x00000000        0x4 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE20enableNvicInterruptsENS_13PitChannelNumE
+                0x00000000       0x34 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE4gpioEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj1ELNS_8PolarityE0EE4gpioEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE4gpioEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE4gpioEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm1024ELm1074044928EL9IRQn_Type41ELm1074786368ELj1ELNS_8PolarityE0EE4gpioEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj0ELNS_8PolarityE0EE5setInEv
+                0x00000000       0x16 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm2048ELm1074049024EL9IRQn_Type42ELi0ELm256EE6setPCREm
+                0x00000000       0x22 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm2048ELm1074049024EL9IRQn_Type42ELm1074786432ELj1ELNS_8PolarityE0EE5setInEv
+                0x00000000       0x16 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm2048ELm1074049024EL9IRQn_Type42ELi1ELm256EE6setPCREm
+                0x00000000       0x22 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj6ELNS_8PolarityE0EE5setInEv
+                0x00000000       0x16 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi6ELm256EE6setPCREm
+                0x00000000       0x22 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm4096ELm1074053120EL9IRQn_Type43ELm1074786496ELj5ELNS_8PolarityE0EE5setInEv
+                0x00000000       0x16 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi5ELm256EE6setPCREm
+                0x00000000       0x22 ./Sources/jogStick.o
+ .text._ZN5USBDM10GpioBase_TILm1024ELm1074044928EL9IRQn_Type41ELm1074786368ELj1ELNS_8PolarityE0EE5setInEv
+                0x00000000       0x16 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm1024ELm1074044928EL9IRQn_Type41ELi1ELm256EE6setPCREm
+                0x00000000       0x22 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE17unhandledCallbackEv
+                0x00000000        0xe ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE23configureChannelInTicksENS_13PitChannelNumEmNS_13PitChannelIrqE
+                0x00000000       0x74 ./Sources/jogStick.o
+ .text._ZN5USBDM9PitBase_TINS_7PitInfoEE21convertSecondsToTicksEf
+                0x00000000       0xac ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm2048ELm1074049024EL9IRQn_Type42ELi0ELm256EE6pcrRegEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm2048ELm1074049024EL9IRQn_Type42ELi1ELm256EE6pcrRegEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi6ELm256EE6pcrRegEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm4096ELm1074053120EL9IRQn_Type43ELi5ELm256EE6pcrRegEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .text._ZN5USBDM5Pcr_TILm1024ELm1074044928EL9IRQn_Type41ELi1ELm256EE6pcrRegEv
+                0x00000000       0x14 ./Sources/jogStick.o
+ .data._ZN5USBDM9PitBase_TINS_7PitInfoEE17allocatedChannelsE
+                0x00000000        0x4 ./Sources/jogStick.o
+ .data._ZN5USBDM9PitBase_TINS_7PitInfoEE10sCallbacksE
+                0x00000000       0x10 ./Sources/jogStick.o
+ .debug_info    0x00000000    0x13c49 ./Sources/jogStick.o
+ .debug_abbrev  0x00000000      0xd45 ./Sources/jogStick.o
+ .debug_aranges
+                0x00000000      0x270 ./Sources/jogStick.o
+ .debug_ranges  0x00000000      0x260 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x490 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0xbc8 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x1c ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x22 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x8e ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x51 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0xef ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x6a ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x1df ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x26 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x10 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x17b ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x34 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x3b ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x50 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0xbc6 ./Sources/jogStick.o
+ .debug_macro   0x00000000     0x83ec ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x15b ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x16e ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x10 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x3fb ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x5e ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x35c ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x7c ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x17 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0xee ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x1c ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x28 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x16 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x18 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x18 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x35 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x34 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x58 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x1f ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x43 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x20 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x18e ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x1da ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x10 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x16 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x35 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x16 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x29 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x10 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x3ce ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x16 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x1c ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x6e ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x28 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x86 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x18 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x2e ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x1f ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x76 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x19 ./Sources/jogStick.o
+ .debug_macro   0x00000000      0x120 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x11 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x11 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x17 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x17 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x17 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x17 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x17 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x10 ./Sources/jogStick.o
+ .debug_macro   0x00000000       0x4c ./Sources/jogStick.o
+ .debug_line    0x00000000     0x16ae ./Sources/jogStick.o
+ .debug_str     0x00000000    0x5cfc1 ./Sources/jogStick.o
+ .comment       0x00000000       0x76 ./Sources/jogStick.o
+ .debug_frame   0x00000000      0xa10 ./Sources/jogStick.o
+ .ARM.attributes
+                0x00000000       0x2e ./Sources/jogStick.o
  .group         0x00000000        0xc ./Sources/lcd.o
  .group         0x00000000        0x8 ./Sources/lcd.o
  .group         0x00000000        0x8 ./Sources/lcd.o
@@ -5525,13 +5600,13 @@ LOAD ./Startup_Code/system-gcc.o
 LOAD ./Startup_Code/system.o
 LOAD ./Startup_Code/vectors.o
 LOAD ./Sources/ClockGenerator.o
-LOAD ./Sources/clockControl.o
 LOAD ./Sources/delay.o
 LOAD ./Sources/fonts.o
 LOAD ./Sources/ftfl.o
 LOAD ./Sources/hardware.o
 LOAD ./Sources/i2c.o
 LOAD ./Sources/indicator.o
+LOAD ./Sources/jogStick.o
 LOAD ./Sources/lcd.o
 LOAD ./Sources/main.o
 LOAD ./Sources/sevenSegment.o

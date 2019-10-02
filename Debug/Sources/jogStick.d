@@ -1,5 +1,5 @@
-Sources/clockControl.o Sources/clockControl.o: \
- ../Sources/clockControl.cpp ../Sources/clockControl.h \
+Sources/jogStick.o Sources/jogStick.o: ../Sources/jogStick.cpp \
+ C:/Users/trang/Documents/workspace/LabE4/Sources/jogStick.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/error.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pin_mapping.h \
@@ -26,7 +26,7 @@ Sources/clockControl.o Sources/clockControl.o: \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/pit.h \
  C:/Users/trang/Documents/workspace/LabE4/Project_Headers/smc.h
 
-../Sources/clockControl.h:
+C:/Users/trang/Documents/workspace/LabE4/Sources/jogStick.h:
 
 C:/Users/trang/Documents/workspace/LabE4/Project_Headers/hardware.h:
 

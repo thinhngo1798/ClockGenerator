@@ -5,13 +5,13 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../Sources/ClockGenerator.cpp \
-../Sources/clockControl.cpp \
 ../Sources/delay.cpp \
 ../Sources/fonts.cpp \
 ../Sources/ftfl.cpp \
 ../Sources/hardware.cpp \
 ../Sources/i2c.cpp \
 ../Sources/indicator.cpp \
+../Sources/jogStick.cpp \
 ../Sources/lcd.cpp \
 ../Sources/main.cpp \
 ../Sources/sevenSegment.cpp \
@@ -20,13 +20,13 @@ CPP_SRCS += \
 
 OBJS += \
 ./Sources/ClockGenerator.o \
-./Sources/clockControl.o \
 ./Sources/delay.o \
 ./Sources/fonts.o \
 ./Sources/ftfl.o \
 ./Sources/hardware.o \
 ./Sources/i2c.o \
 ./Sources/indicator.o \
+./Sources/jogStick.o \
 ./Sources/lcd.o \
 ./Sources/main.o \
 ./Sources/sevenSegment.o \
@@ -35,13 +35,13 @@ OBJS += \
 
 CPP_DEPS += \
 ./Sources/ClockGenerator.d \
-./Sources/clockControl.d \
 ./Sources/delay.d \
 ./Sources/fonts.d \
 ./Sources/ftfl.d \
 ./Sources/hardware.d \
 ./Sources/i2c.d \
 ./Sources/indicator.d \
+./Sources/jogStick.d \
 ./Sources/lcd.d \
 ./Sources/main.d \
 ./Sources/sevenSegment.d \
