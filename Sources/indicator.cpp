@@ -10,10 +10,11 @@ Indicator::Indicator(): lcd(spi)
 {
 	int currentXPos = first_Xpos;
 	int currentYPos = first_Ypos;
-	int numberSegments = 3;
+	//int numberSegments = 3;
 	for (int i = 0; i < numberSegments; ++i)
 	{
 		digit[i].setXY(currentXPos, currentYPos);
+		//console.write("Current x pos: ").write(currentXPos).writeln("\n");
 		currentXPos -= horizontal_dist;
 	}
 
@@ -77,7 +78,7 @@ void Indicator::displayOnOff(bool isOn)
 
 void Indicator::displayNumber(int number)
 {
-	int numberSegments = 3;
+	//int numberSegments = 3;
 
 	int currentDigit;
 
@@ -85,12 +86,22 @@ void Indicator::displayNumber(int number)
 	{
 		currentDigit = number % 10;
 		number/=10;
-		digit[i].drawNum(lcd, currentDigit, foreGroundColor, backGroundColor);
+		digit[i].drawNum(lcd, currentDigit, numberColor, backGroundColor);
 	}
 }
 
 void Indicator::displayMessage(int frequency)
 {
+	lcd.setFont(fontSmall).setForeground(backGroundColor).setBackground(backGroundColor);
+	if (existingFrequency == MIN_FREQUENCY)
+	{
+		lcd.putStr(minFrequencyMessage, message_Xpos, message_Ypos);
+	}
+	else if (existingFrequency == MAX_FREQUENCY)
+	{
+		lcd.putStr(maxFrequencyMessage, message_Xpos, message_Ypos);
+	}
+
 	lcd.setFont(fontSmall).setForeground(foreGroundColor).setBackground(backGroundColor);
 	//
 	// not erasing the old message yet
@@ -105,21 +116,32 @@ void Indicator::displayMessage(int frequency)
 	}
 }
 
-void Indicator::display(int frequency)
+void Indicator::display(bool isOn, int frequency)
 {
 	//char * pUnit = getUnit(frequency);
-	int scalar = getScalar(existingFrequency);
-	lcd.setFont(fontSmall).setForeground(backGroundColor).setBackground(foreGroundColor);
-	displayUnit(scalar);
+	displayOnOff(isOn);
 
-	scalar = getScalar(frequency);
-	lcd.setFont(fontSmall).setForeground(foreGroundColor).setBackground(backGroundColor);
-	displayUnit(scalar);
+	if (isOn) {
+		//clear the old unit
+		int scalar = getScalar(existingFrequency);
+		lcd.setFont(fontSmall).setForeground(backGroundColor).setBackground(backGroundColor);
+		displayUnit(scalar);
 
-	displayNumber(frequency/scalar);
+		//print out the new unit
+		scalar = getScalar(frequency);
+		lcd.setFont(fontSmall).setForeground(foreGroundColor).setBackground(backGroundColor);
+		displayUnit(scalar);
 
-	//convert into digit
+		displayNumber(frequency/scalar);
 
-	displayMessage(frequency);
+		//convert into digit
+
+		displayMessage(frequency);
+	}
+	else
+	{
+		lcd.clear(backGroundColor);
+	}
+	displayOnOff(isOn);
 	existingFrequency = frequency;
 }

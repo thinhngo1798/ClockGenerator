@@ -17,25 +17,27 @@
  *
  ============================================================================
  */
+#include <jogStick.h>
 #include <stdlib.h>
 #include "lcd.h"
 #include "spi.h"
 #include "delay.h"
+#include "config.h"
 
+#include "Generator.h"
 #include "indicator.h"
-#include "clockControl.h"
+#include "jogStick.h"
 
 // Access to USBDM name-space
 using namespace USBDM;
 
 
 //is there any conflict with the instruction
-using North_Switch = GpioC<0,ActiveLow>;
-
-using South_Switch = GpioD<6,ActiveLow>;
-using Centre_Switch = GpioD<5,ActiveLow>;
-//using West_Switch = GpioB<1,ActiveLow>;
-//using East_Switch = GpioC<1,ActiveLow>;
+//using North_Switch = GpioC<0,ActiveLow>;
+//using South_Switch = GpioD<6,ActiveLow>;
+//using Centre_Switch = GpioD<5,ActiveLow>;
+//using North_Switch -= GpioB<1,ActiveLow>; //old west
+//using South_Switch = GpioC<1,ActiveLow>; //old east
 
 static constexpr bool ON = true;
 static constexpr bool OFF = false;
@@ -44,7 +46,7 @@ static int currentStatus = OFF;
 
 static int frequency_index = 0;
 
-static constexpr int MAX_INDEX = 19;
+static constexpr int MAX_INDEX = 15;
 
 const int frequency[20] = 	{
 								1, 2, 5,
@@ -103,19 +105,22 @@ void incrementIndex()
 	++frequency_index;
 	if (frequency_index > MAX_INDEX)
 	{
-		frequency_index = 0;
+		frequency_index = 2;
 	}
 }
 
 void decrementIndex()
 {
 	--frequency_index;
-	if (frequency_index < 0)
+	if (frequency_index < 2)
 	{
 		frequency_index = MAX_INDEX;
 	}
 }
 
+/*
+ * Turn on/off the clock generator
+ */
 void toggleStatus()
 {
 	currentStatus = ~currentStatus;
@@ -124,38 +129,47 @@ void toggleStatus()
 int main()
 {
 	int lastFrequency = 0;
+	int lastStatus = currentStatus;
+
 	Indicator lcdIndicator = Indicator();
+	generatorInitialise();
 	initialiseClockControl();
+
 	for (;;)
 	{
+//		incrementIndex();
+//		lcdIndicator.display(ON, frequency[frequency_index]);
+//		waitMS(1000);
 		Smc::enterWaitMode();
 
-		if (getNorthPress())
+		SwitchValue currentSwitch = getJogswitchValue();
+		switch(currentSwitch)
 		{
-			incrementIndex();
-		}
-
-		if (getSouthPress())
-		{
-			decrementIndex();
-		}
-
-		if (getCentrePress())
-		{
-			toggleStatus();
+			case northSwitch:
+				incrementIndex();
+				break;
+			case southSwitch:
+				decrementIndex();
+				break;
+			case centreSwitch:
+				toggleStatus();
+				break;
+			default:
+				break;
 		}
 
 		int currentFrequency = 	frequency[frequency_index];
 
-		if (currentFrequency != lastFrequency)
+		if (currentFrequency != lastFrequency || currentStatus != lastStatus)
 		{
-			lcdIndicator.display(currentFrequency);
+			lcdIndicator.display(currentStatus, currentFrequency);
+			generatorSetFrequency(currentFrequency);
 		}
 		lastFrequency = currentFrequency;
+		lastStatus = currentStatus;
 	}
 	return 0;
 }
-
 
 //int main() {
 //
@@ -189,7 +203,7 @@ int main()
 ////   //lcd.drawCircle(CENTRE_X, CENTRE_Y, 40, WHITE);
 ////
 ////   // Set LCD defaults
-////   lcd.setFont(fontSmall).setForeground(FOREGROUND_COLOUR).setBackground(BACKGROUND_COLOUR);
+//// 	lcd.setFont(fontSmall).setForeground(FOREGROUND_COLOUR).setBackground(BACKGROUND_COLOUR);
 ////
 ////   // Simple text with position and default font and colours
 ////   lcd.putStr("Some Circles", 30, 10);
